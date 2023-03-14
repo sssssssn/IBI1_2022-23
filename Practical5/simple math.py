@@ -7,4 +7,4 @@ if d > e:
     print('d is larger')
 else:
     print('e is larger')
-#e is larger, rob travelled to Haining
+#e is larger, rob travelled further to Haining
