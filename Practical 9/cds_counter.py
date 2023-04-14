@@ -9,8 +9,8 @@ if re.search('ATG',seq):
     count = count + len(a)
     b = re.findall(r'TAG',seq)
     count = count+len(b)
-    c = re.findall('TGA',seq)
+    c = re.findall(r'TGA',seq)
     count = count+len(c)
 #find the stop codons and counting
 print('The total number of possible coding sequences is', count)
-        
+
