@@ -1,0 +1,18 @@
+Result:
+> ACE2_CAT (Q56H28) 
+> ACE2_HUMAN (Q9BYF1)
+Alignment Score: 3717
+Identical Percentage: 85.21739130434783
+
+> ACE2_HUMAN (Q9BYF1)
+> ACE2_MOUSE (Q8R0I0) 
+Alignment Score: 3579
+Identical Percentage: 82.11180124223603
+
+> ACE2_CAT (Q56H28) 
+> ACE2_MOUSE (Q8R0I0)
+Alignment Score: 3592
+Identical Percentage: 81.73913043478261
+
+Interpretation:
+The human ACE2 sequence is most closely related to the cat ACE2 sequence. There are 85.2% identical amino acids in the human and cat sequence, 82.1% in human and mouse and 81.7% in cat and mouse. Thus, the human and the cat ACE2 proteins are evolutionarily more closely related. We can predict a closer kinship between human and cat ancestors. 
