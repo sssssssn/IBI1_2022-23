@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: Take a random number from 1 to 100, ten times, and if the number taken out is larger than the previous number, store it and finally output it
+# Answer: Take a random number from 1 to 100, ten times, and if the number taken out is the largest so far, store it and finally output it
 
 # Import libraries
 # randint allows drawing a random number,
