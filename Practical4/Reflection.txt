@@ -1,1 +1,1 @@
-command"git push"is challenging,many problems will occur
+command"git push"is challenging, many problems will occur.
