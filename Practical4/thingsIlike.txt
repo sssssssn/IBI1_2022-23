@@ -1,7 +1,7 @@
 I like movies
 I like music
 I like chocolate
-I like hambergurs
+I like hamburgers
 I like sleeping
 I don't like potato
 
