@@ -11,12 +11,14 @@ covid_data = pd.read_csv("xid-1063743_1")
 print(covid_data.iloc[0:1001:100,1])
 #showing the second column from every 100th row from the 1000 rows  
     
-counter=0
-for i in covid_data.loc[:,"location"]:
-    if i == "Afghanistan":
-     my_columns = [False, True, False, False, True, False]
-     print(covid_data.loc[counter,my_columns])
-     counter=counter+1
+location_column = [False, True, False, False, False, False]
+location_data = covid_data.iloc[:,location_column]
+Afghanistan_row = [] #create a list to store Boolean values
+for i in location_data.location: 
+    Boolean = i=="Afghanistan"
+    Afghanistan_row.append(Boolean) 
+
+print(covid_data.loc[Afghanistan_row,"total_cases"]) 
 #show “total cases” for all rows corresponding to Afghanistan.
 
 counter=0
