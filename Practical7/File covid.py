@@ -74,11 +74,34 @@ plt.title('new cases and new deaths worldwide over time')
 plt.show()
 #plot both new cases and new deaths worldwide over time.
 
-my_raws = covid_data['location'] == 'China'
+china_date = []
+for i in covid_data.date:
+    if not i in china_date:
+       china_date.append(i)
+china_date = sorted(china_date) 
+
+china_new_cases = []
+china_data_rows=covid_data.loc[:,"location"]=="China"
+#these command is to find out which lines are used to record the data in china
+china_covid_data=covid_data.loc[china_data_rows,:]
+#this will generate a new form in which china data are recorded
+
+for i in china_date:
+    china_new_cases.append(np.sum(china_covid_data.loc[china_covid_data.loc[:,"date"] == i, "new_cases"]))
+    #use a list to store the data of new cases in china
+    my_raws = covid_data['location'] == 'China'
 china_dates = covid_data.loc[my_raws,'date']
 print(covid_data.loc[my_raws,['new_cases','total_cases']])
-plt.plot(china_dates,covid_data.loc[my_raws,'new_cases'],'b+')
-plt.plot(china_dates,covid_data.loc[my_raws,'total_cases'],'r+')
+total_china_cases=0
+total_china_cases_list=[]
+for i in china_new_cases:
+    total_china_cases+=i
+    total_china_cases_list.append(total_china_cases)
+    
+plt.plot(china_dates,china_new_cases,'b+')
+plt.plot(china_dates,total_china_cases_list,'r+')
+plt.xticks(world_new_date[0:len(china_date):4],rotation=-90)
+#Adjust the x label to make it easer to read
 plt.title('new cases and total cases developed over time in the China')
 plt.show()
 #plot new cases and total cases developed over time in the China
